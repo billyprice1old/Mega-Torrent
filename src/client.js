@@ -12,7 +12,7 @@ Client.prototype.download = function (torrentLink, callback) {
     self.link = torrentLink
     self.client.add(torrentLink, {path: './downloads'}, function (torrent) {
       self.torrent = torrent
-      torrent.on('done', function (torrent) {
+      torrent.on('done', function () {
         callback(torrent)
       })
     })
