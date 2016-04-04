@@ -54,5 +54,8 @@
   ### clients.stop()
   Stop and destroy the current downloading torrent.
 
+  ### clients.getProgress()
+  Return the current download percentage. (between 0 and 1)
+
   ### clients.getTorrent()
   Return [WebTorrent torrent](https://webtorrent.io/docs#torrent) instance.

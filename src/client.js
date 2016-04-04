@@ -27,4 +27,7 @@ Client.prototype.getTorrent = function () {
   return this.torrent
 }
 
+Client.prototype.getProgress = function(){
+  return this.torrent.progress
+}
 module.exports = Client
