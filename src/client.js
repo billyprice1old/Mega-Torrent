@@ -10,7 +10,7 @@ Client.prototype.download = function (torrentLink, callback) {
   var self = this
   setTimeout(function () {
     self.link = torrentLink
-    self.client.add(torrentLink, {path: config.torrent.downloads}, function (torrent) {
+    self.client.add(torrentLink, {path: "./downloads"}, function (torrent) {
       console.log('Start torrent: ' + torrent.name)
       self.torrent = torrent
       torrent.on('done', function () {

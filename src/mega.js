@@ -10,7 +10,7 @@ function Mega(options){
 Mega.prototype.upload = function(file){
   var self = this
   setTimeout(function(){
-    var stream = fs.createReadStream(file).pipe(
+    var stream = fs.createReadStream("./downloads/"+file).pipe(
       self.storage.upload(
         file.split('\/')[file.split('\/').length -1]
       )

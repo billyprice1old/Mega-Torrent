@@ -13,7 +13,7 @@ Mega_Torrent.prototype.download = function(url){
       console.log(file.name)
       console.log('Upload '+file.name+' on Mega')
       var m = new mega({email: self.email, password: self.password})
-      m.upload(config.torrent.downloads+file.name)
+      m.upload(file.name)
     })
   })
 }
