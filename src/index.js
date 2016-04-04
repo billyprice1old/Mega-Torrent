@@ -7,11 +7,10 @@ function Mega_Torrent(data){
 }
 
 Mega_Torrent.prototype.download = function(url){
+  var self = this
   var c = new client()
   c.download(url, function(torrent){
     torrent.files.forEach(function(file){
-      console.log(file.name)
-      console.log('Upload '+file.name+' on Mega')
       var m = new mega({email: self.email, password: self.password})
       m.upload(file.name)
     })
