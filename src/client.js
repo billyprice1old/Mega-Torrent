@@ -1,6 +1,3 @@
-var Log = require('./log.js')
-var config = require('./config.json')
-
 var WebTorrent = require('webtorrent')
 
 function Client () {
