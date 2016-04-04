@@ -20,7 +20,11 @@ Client.prototype.download = function (torrentLink, callback) {
 }
 
 Client.prototype.stop = function () {
-  this.torrent.destroy()
+  if(this.torrent){
+    this.torrent.destroy()
+  } else {
+    return null
+  }
 }
 
 Client.prototype.getTorrent = function () {
@@ -28,6 +32,11 @@ Client.prototype.getTorrent = function () {
 }
 
 Client.prototype.getProgress = function(){
-  return this.torrent.progress
+  if(this.torrent){
+    return this.torrent.progress
+  } else {
+    return null
+  }
+
 }
 module.exports = Client
