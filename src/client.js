@@ -3,7 +3,7 @@ var WebTorrent = require('webtorrent')
 function Client () {
   this.client = new WebTorrent()
   this.link = ''
-  this.torrent = {}
+  this.torrent = null
 }
 
 Client.prototype.download = function (torrentLink, callback) {
@@ -11,10 +11,8 @@ Client.prototype.download = function (torrentLink, callback) {
   setTimeout(function () {
     self.link = torrentLink
     self.client.add(torrentLink, {path: './downloads'}, function (torrent) {
-      console.log('Start torrent: ' + torrent.name)
       self.torrent = torrent
-      torrent.on('done', function () {
-        console.log('Finish torrent: ' + torrent.name)
+      torrent.on('done', function (torrent) {
         callback(torrent)
       })
     })
@@ -25,6 +23,8 @@ Client.prototype.stop = function () {
   this.torrent.destroy()
 }
 
-Client.prototype.getInfo = function () {}
+Client.prototype.getTorrent = function () {
+  return this.torrent
+}
 
 module.exports = Client

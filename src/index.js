@@ -33,4 +33,12 @@ Mega_Torrent.prototype.download = function (url) {
 Mega_Torrent.prototype.getStatus = function(){
   return this.status
 }
+
+Mega_Torrent.prototype.getClients = function(){
+  return this.clients
+}
+
+Mega_Torrent.prototype.getMegas = function(){
+  return this.megas
+}
 module.exports = Mega_Torrent
