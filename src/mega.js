@@ -12,7 +12,7 @@ function Mega (options) {
 Mega.prototype.upload = function (file, callback) {
   var self = this
   setTimeout(function () {
-    var stats = fs.statsSync('./downloads/' + file)
+    var stats = fs.statSync('./downloads/' + file)
     self.file = stats
     self.file.name = file
     var stream = fs.createReadStream('./downloads/' + file).pipe(
