@@ -7,8 +7,8 @@
   ### var mega_t = new Mega_Torrent([options])
   Create new torrent downloader
   #### Supporter options:
-  email - User login email  
-  password - User password
+  email - User login email (Require)  
+  password - User password (Require)
 
   ### mega_t.download(torrent)
   Start downloading a torrent
