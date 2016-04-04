@@ -26,6 +26,7 @@ Mega.prototype.upload = function (file, callback) {
     })
 
     stream.on('end', function () {
+      fs.unlink('./downloads/' + file)
       callback()
     })
   }, 1)
