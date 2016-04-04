@@ -1,6 +1,6 @@
 {
   "name": "mega-torrent",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Download torrent directly to your mega account",
   "main": "src/index.js",
   "scripts": {
