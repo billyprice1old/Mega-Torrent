@@ -1,3 +1,5 @@
+var client = require('./client.js')
+var mega = require('./mega.js')
 
 function Mega_Torrent(data){
   this.email = data.email
