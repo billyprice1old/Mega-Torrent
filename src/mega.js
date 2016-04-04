@@ -37,7 +37,7 @@ Mega.prototype.getStream = function(){
 }
 
 Mega.prototype.getProgress = function(){
-  if(this.progress and this.file){
+  if(this.progress && this.file){
     return this.progress / this.file.size
   } else {
     return null
