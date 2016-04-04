@@ -4,7 +4,8 @@
   "description": "Download torrent directly to your mega account",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"ok\";"
+    "start": "node src/index.js",
+    "install": "mkdir downloads;"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/Lunik/Mega-Torrent#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
     "express": "^4.13.4",
     "fs": "0.0.2",
     "http-auth": "^2.2.9",
