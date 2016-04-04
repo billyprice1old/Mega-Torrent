@@ -20,7 +20,7 @@ Client.prototype.download = function (torrentLink, callback) {
 }
 
 Client.prototype.stop = function () {
-  if(this.torrent){
+  if (this.torrent) {
     this.torrent.destroy()
   } else {
     return null
@@ -31,8 +31,8 @@ Client.prototype.getTorrent = function () {
   return this.torrent
 }
 
-Client.prototype.getProgress = function(){
-  if(this.torrent){
+Client.prototype.getProgress = function () {
+  if (this.torrent) {
     return this.torrent.progress
   } else {
     return null

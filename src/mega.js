@@ -32,19 +32,19 @@ Mega.prototype.upload = function (file, callback) {
   }, 1)
 }
 
-Mega.prototype.getStream = function(){
+Mega.prototype.getStream = function () {
   return this.stream
 }
 
-Mega.prototype.getProgress = function(){
-  if(this.progress && this.file){
+Mega.prototype.getProgress = function () {
+  if (this.progress && this.file) {
     return this.progress / this.file.size
   } else {
     return null
   }
 }
 
-Mega.prototype.getFile = function(){
+Mega.prototype.getFile = function () {
   return this.file
 }
 module.exports = Mega
