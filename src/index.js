@@ -13,7 +13,7 @@ Mega_Torrent.prototype.download = function(url){
     c.download(url, function(torrent){
       torrent.files.forEach(function(file){
         var m = new mega({email: self.email, password: self.password})
-        m.upload(file.name)
+        m.upload(file.name, function(){})
       })
     })
   }, 1)
