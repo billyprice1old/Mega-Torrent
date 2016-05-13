@@ -37,6 +37,5 @@ Client.prototype.getProgress = function () {
   } else {
     return null
   }
-
 }
 module.exports = Client
