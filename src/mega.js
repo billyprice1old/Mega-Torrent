@@ -17,7 +17,7 @@ Mega.prototype.upload = function (file, callback) {
     self.file.name = file
     var stream = fs.createReadStream('./downloads/' + file).pipe(
       self.storage.upload(
-        file.split('\/')[file.split('\/').length - 1]
+        file.split('/')[file.split('/').length - 1]
       )
     )
     self.stream = stream
