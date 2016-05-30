@@ -7,9 +7,11 @@ node_js:
 - '4'
 before_install:
 - npm install standard -g
-script:
+
+job_standard:
 - standard
-deploy:
+
+job_deploy:
   provider: npm
   email: guillaume.lunik@gmail.com
   on:
