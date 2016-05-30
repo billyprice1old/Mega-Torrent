@@ -1,3 +1,6 @@
+# Mega-Torrent
+![build-badge](https://travis-ci.org/Lunik/Mega-Torrent.svg)
+
 # Installation
   `npm install mega-torrent`
 
